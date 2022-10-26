@@ -1,22 +1,23 @@
-import { Button, useColorMode } from "@chakra-ui/react";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import { Header } from "src/components/pages/Header";
+
 
 export default function Home() {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const navBg = useColorModeValue("custom.primaryLight", "custom.primaryDark");
+
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Julian Gonzalez</title>
+        <link rel="icon" href="/logo.png" />
         <meta name="description" content="Created by Julian Gonzalez" />
-        <link rel="icon" href="/logo.png  " />
       </Head>
 
-      <main className={styles.main}>
-        <Button onClick={toggleColorMode}>
-          Toggle {colorMode === "light" ? "Dark" : "Light"}
-        </Button>
+      <main>
+        <Box bg={navBg}>
+          <Header />
+        </Box>
       </main>
     </div>
   );
