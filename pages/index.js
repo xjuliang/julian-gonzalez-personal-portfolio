@@ -1,7 +1,7 @@
 import { Box, useColorModeValue } from "@chakra-ui/react";
 import Head from "next/head";
+import { About } from "src/components/index";
 import { Header } from "src/components/pages/Header";
-
 
 export default function Home() {
   const navBg = useColorModeValue("custom.primaryLight", "custom.primaryDark");
@@ -17,7 +17,7 @@ export default function Home() {
       <main>
         <Box bg={navBg}>
           <Header />
-          <Box bg="red" h="100px" >HOLAAAAAAAA</Box>
+          <About />
         </Box>
       </main>
     </div>
