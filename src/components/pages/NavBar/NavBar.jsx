@@ -25,6 +25,7 @@ const NavBar = () => {
       p="30px"
       position="fixed"
       borderBottom="0.001cm solid grey"
+      zIndex="1"
     >
       <ItalicText fontSize="30px">JG</ItalicText>
       <Spacer />
