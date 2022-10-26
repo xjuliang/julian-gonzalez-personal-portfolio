@@ -1,0 +1,41 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+@font-face {
+  font-family: "Italic Bricks";
+  src: url("//db.onlinewebfonts.com/t/ab16de1889ae2b44535f6bd55477bff4.eot");
+  src: url("//db.onlinewebfonts.com/t/ab16de1889ae2b44535f6bd55477bff4.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/ab16de1889ae2b44535f6bd55477bff4.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/ab16de1889ae2b44535f6bd55477bff4.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/ab16de1889ae2b44535f6bd55477bff4.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/ab16de1889ae2b44535f6bd55477bff4.svg#Italic Bricks")
+      format("svg");
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
