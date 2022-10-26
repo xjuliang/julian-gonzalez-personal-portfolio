@@ -17,6 +17,7 @@ export default function Home() {
       <main>
         <Box bg={navBg}>
           <Header />
+          <Box bg="red" h="100px" >HOLAAAAAAAA</Box>
         </Box>
       </main>
     </div>
