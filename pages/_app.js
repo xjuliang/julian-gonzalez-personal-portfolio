@@ -4,7 +4,9 @@ import {
 } from "@chakra-ui/react";
 import { NavBar } from "src/components/pages/NavBar";
 import "src/styles/globals.css";
+import "src/styles/animated-components.css";
 import theme from "src/theme/index";
+import '@fontsource/montserrat/300.css'
 
 function MyApp({ Component, pageProps }) {
 

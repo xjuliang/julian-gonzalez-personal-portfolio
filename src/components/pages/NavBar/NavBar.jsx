@@ -4,7 +4,7 @@ import {
   Flex,
   Spacer,
   useColorMode,
-  useColorModeValue,
+  useColorModeValue
 } from "@chakra-ui/react";
 import { ItalicText } from "src/components/others";
 
