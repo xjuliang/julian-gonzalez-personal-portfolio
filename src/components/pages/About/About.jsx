@@ -1,10 +1,12 @@
 import {
-	Box,
-	Flex,
-	Heading,
-	Spacer,
-	Text,
-	useColorModeValue
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Spacer,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { aboutEN, aboutES } from "data";
 import { useSelector } from "react-redux";
@@ -32,6 +34,7 @@ const About = () => {
     "custom.primaryDark"
   );
   const fontColor = useColorModeValue("", "#cecece");
+  const iconsColor = useColorModeValue("-dark", "-white");
 
   return (
     <section>
@@ -62,11 +65,9 @@ const About = () => {
               </Heading>
               <Box fontSize="16px" color={fontColor}>
                 {about.description.map((el) => (
-                  <Text key={el}>
-                    {el}
-                  </Text>
+                  <Text key={el}>{el}</Text>
                 ))}
-                <Box mt={5}>
+                <Flex mt={5} align="center">
                   <form
                     action="https://drive.google.com/file/d/1bPJ3QuMrrwZPLnhvGOJ_5o9gOibaGOdk/view?usp=sharing"
                     target="_blank"
@@ -75,7 +76,33 @@ const About = () => {
                       <span>{about.resumeText}</span>
                     </button>
                   </form>
-                </Box>
+                  <Button
+                    onClick={() => window.open("https://github.com/xjuliang")}
+                    leftIcon={
+                      <Image
+                        src={`/icons/github${iconsColor}.svg`}
+                        layout="fill"
+                        alt="github"
+                        h="40px"
+                      />
+                    }
+                    variant="unstyled"
+                    ml={5}
+                  ></Button>
+                  <Button
+                    onClick={() => window.open("https://www.linkedin.com/in/juli%C3%A1n-marcos-gonz%C3%A1lez-354403201/")}
+                    leftIcon={
+                      <Image
+                        src={`/icons/linkedin${iconsColor}.svg`}
+                        layout="fill"
+                        alt="linkedin"
+                        h="40px"
+                      />
+                    }
+                    variant="unstyled"
+                    ml={5}
+                  ></Button>
+                </Flex>
               </Box>
             </Box>
             <Skills about={about} />

@@ -6,5 +6,7 @@ export * from './pages/About/Skills';
 export * from './pages/About';
 export * from './pages/Header';
 export * from './pages/NavBar';
+export * from './pages/Projects/ProjectsInfo/ProjectCard';
+export * from './pages/Projects/ProjectsInfo';
 export * from './pages/Projects';
 export * from './pages';
