@@ -1,0 +1,151 @@
+.btn-dark,
+.btn-dark *,
+.btn-dark :after,
+.btn-dark :before,
+.btn-dark:after,
+.btn-dark:before {
+  box-sizing: border-box;
+}
+.btn-dark {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+.btn-dark:disabled {
+  cursor: default;
+}
+.btn-dark:-moz-focusring {
+  outline: auto;
+}
+.btn-dark svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-dark [hidden] {
+  display: none;
+}
+.btn-dark {
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 13px 23px;
+  position: relative;
+}
+.btn-dark span {
+  mix-blend-mode: difference;
+}
+.btn-dark:after,
+.btn-dark:before {
+  --tilt: 1.2rem;
+  background: #fff;
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 100%,
+    0 100%
+  );
+  clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 100%, 0 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: calc(-100% - var(--tilt));
+  position: absolute;
+  top: 0;
+  transform: translateX(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: calc(100% + var(--tilt));
+}
+.btn-dark:after {
+  left: 100%;
+  transform: translateX(var(--progress, 0)) rotate(180deg);
+  z-index: -1;
+}
+.btn-dark:hover:before {
+  --progress: 100%;
+}
+.btn-dark:hover:after {
+  --progress: -100%;
+}
+
+.btn-white,
+.btn-white *,
+.btn-white :after,
+.btn-white :before,
+.btn-white:after,
+.btn-white:before {
+  box-sizing: border-box;
+}
+.btn-white {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.2;
+  -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+  padding: 0;
+}
+.btn-white:disabled {
+  cursor: default;
+}
+.btn-white:-moz-focusring {
+  outline: auto;
+}
+.btn-white svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-white [hidden] {
+  display: none;
+}
+.btn-white {
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 13px 23px;
+  position: relative;
+}
+.btn-white span {
+  mix-blend-mode: difference;
+}
+.btn-white:after,
+.btn-white:before {
+  --tilt: 1.2rem;
+  background: #000;
+  -webkit-clip-path: polygon(
+    0 0,
+    calc(100% - var(--tilt)) 0,
+    100% 100%,
+    0 100%
+  );
+  clip-path: polygon(0 0, calc(100% - var(--tilt)) 0, 100% 100%, 0 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: calc(-100% - var(--tilt));
+  position: absolute;
+  top: 0;
+  transform: translateX(var(--progress, 0));
+  transition: transform 0.2s ease;
+  width: calc(100% + var(--tilt));
+}
+.btn-white:after {
+  left: 100%;
+  transform: translateX(var(--progress, 0)) rotate(180deg);
+  z-index: -1;
+}
+.btn-white:hover:before {
+  --progress: 100%;
+}
+.btn-white:hover:after {
+  --progress: -100%;
+}
