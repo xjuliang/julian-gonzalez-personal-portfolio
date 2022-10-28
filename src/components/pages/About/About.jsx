@@ -33,7 +33,7 @@ const About = () => {
     "custom.primaryLight",
     "custom.primaryDark"
   );
-  const fontColor = useColorModeValue("", "#cecece");
+  const fontColor = useColorModeValue("", "#cececece");
   const iconsColor = useColorModeValue("-dark", "-white");
 
   return (
