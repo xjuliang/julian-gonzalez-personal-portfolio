@@ -6,10 +6,19 @@ import {
   Spacer,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { headerEN, headerES } from "data";
+import { useSelector } from "react-redux";
 import { Fade } from "react-reveal";
 import { ItalicText, Particles } from "src/components/others";
 
 const Header = () => {
+  const storeLanguage = useSelector((store) => store.language.value);
+  let header = {};
+  if (storeLanguage == "EN") {
+    header = headerEN;
+  } else {
+    header = headerES;
+  }
   const titleColor = useColorModeValue("grey", "darkGrey");
   const scrollIconColor = useColorModeValue("mousey-black", "mousey-white");
   const scrollerIconColor = useColorModeValue(
@@ -20,16 +29,14 @@ const Header = () => {
   return (
     <section>
       <Particles></Particles>
-      <Center align="center" justify="center" h="100vh">
-        <Box h="60px" bg="red"></Box>
-        <Flex direction="column" h="100%" align="center">
-          <Spacer />
-          <Flex
-            direction="column"
-            align={["center", "center", "center", "start"]}
-          >
+      <Fade bottom>
+        <Center align="center" justify="center" h="100vh" py="50px">
+          <Flex direction="column" h="100%" align="center">
             <Spacer />
-            <Fade bottom>
+            <Flex
+              direction="column"
+              align={["center", "center", "center", "start"]}
+            >
               <ItalicText fontSize={["45px", "55px", "70px"]}>
                 julian gonzalez
               </ItalicText>
@@ -38,23 +45,20 @@ const Header = () => {
                 fontWeight="100"
                 color={titleColor}
               >
-                Frontend Developer & Computer Technician
+                {header.subtitle}
               </Heading>
-            </Fade>
+            </Flex>
             <Spacer />
-          </Flex>
-          <Spacer />
-          <Center pb="25px">
-            <Fade bottom>
+            <Box>
               <div class="scroll-downs">
                 <div class={scrollIconColor}>
                   <div class={scrollerIconColor}></div>
                 </div>
               </div>
-            </Fade>
-          </Center>
-        </Flex>
-      </Center>
+            </Box>
+          </Flex>
+        </Center>
+      </Fade>
     </section>
   );
 };

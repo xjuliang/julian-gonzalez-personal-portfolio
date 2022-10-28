@@ -6,6 +6,7 @@ import { Header } from "src/components/pages/Header";
 export default function Home() {
   const container = useColorModeValue("container-white", "container-dark");
 
+
   return (
     <div>
       <Head>

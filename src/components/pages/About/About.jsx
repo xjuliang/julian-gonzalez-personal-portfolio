@@ -1,17 +1,26 @@
 import {
-  Box,
-  Center,
-  Flex,
-  Heading,
-  Spacer,
-  Text,
-  useColorModeValue,
+	Box,
+	Flex,
+	Heading,
+	Spacer,
+	Text,
+	useColorModeValue
 } from "@chakra-ui/react";
+import { aboutEN, aboutES } from "data";
+import { useSelector } from "react-redux";
 import { Fade } from "react-reveal";
 import { ItalicText } from "../..";
 import { Skills } from "./Skills";
 
 const About = () => {
+  const storeLanguage = useSelector((store) => store.language.value);
+  let about = {};
+  if (storeLanguage == "EN") {
+    about = aboutEN;
+  } else {
+    about = aboutES;
+  }
+
   const resumeBtnColor = useColorModeValue("btn-white", "btn-dark");
   const scrollIconColor = useColorModeValue("mousey-black", "mousey-white");
   const scrollerIconColor = useColorModeValue(
@@ -26,70 +35,63 @@ const About = () => {
 
   return (
     <section>
-      <Fade bottom>
-        <Flex
-          align="center"
-          justify="center"
-          direction="column"
-          minH="100vh"
-          py="50px"
-          bg={bgColor}
-        >
-          <Spacer />
-
-          <ItalicText maxWidth="500px" pb={[5, 5, 10, 20]}>
-            About me
-          </ItalicText>
+      <Flex
+        align="center"
+        justify="center"
+        direction="column"
+        minH="100vh"
+        py="50px"
+        bg={bgColor}
+      >
+        <Spacer />
+        <Fade bottom>
+          <ItalicText pb={[5, 5, 10, 20]}>{about.title}</ItalicText>
           <Flex
             align="start"
             justify="center"
             direction={["column", "column", "row", "row"]}
           >
-            <Box mx={5} align="start">
+            <Box
+              ml={5}
+              mr={[5, 5, 2, 2]}
+              w={["90%", "94%", "50%", "50%"]}
+              maxW="550px"
+            >
               <Heading fontSize="22px" mb={3}>
-                Hello!
+                {about.descriptionSectionName}
               </Heading>
-              <Box maxWidth="550px" fontSize="16px" color={fontColor}>
-                <Text>
-                  My name is Julián González I´m a passionate Frontend Web
-                  Developer.
-                </Text>
-                <Text>
-                  I consider myself an active person, who is constantly learning
-                  and always open to receive feedback.
-                </Text>
-                <Text>
-                  Although I have a preference for Frontend, I am also
-                  interested in learning about other areas.
-                </Text>
-                <Text>
-                  I will love to hear from you. Whether it´s a project, job
-                  opportunity, or just chat. Feel free to contact me.
-                </Text>
+              <Box fontSize="16px" color={fontColor}>
+                {about.description.map((el) => (
+                  <Text key={el}>
+                    {el}
+                  </Text>
+                ))}
                 <Box mt={5}>
                   <form
                     action="https://drive.google.com/file/d/1bPJ3QuMrrwZPLnhvGOJ_5o9gOibaGOdk/view?usp=sharing"
                     target="_blank"
                   >
                     <button class={resumeBtnColor} type="submit">
-                      <span>Resume</span>
+                      <span>{about.resumeText}</span>
                     </button>
                   </form>
                 </Box>
               </Box>
             </Box>
-            <Skills />
+            <Skills about={about} />
           </Flex>
-          <Spacer />
-          <Box>
+        </Fade>
+        <Spacer />
+        <Box>
+          <Fade bottom>
             <div class="scroll-downs">
               <div class={scrollIconColor}>
                 <div class={scrollerIconColor}></div>
               </div>
             </div>
-          </Box>
-        </Flex>
-      </Fade>
+          </Fade>
+        </Box>
+      </Flex>
     </section>
   );
 };

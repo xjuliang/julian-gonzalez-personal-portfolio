@@ -4,12 +4,25 @@ import {
   Flex,
   Spacer,
   useColorMode,
-  useColorModeValue
+  useColorModeValue,
 } from "@chakra-ui/react";
+import { useDispatch, useSelector } from "react-redux";
 import { ItalicText } from "src/components/others";
+import { languageActions } from "src/redux/states/language";
 
 const NavBar = () => {
+  const dispatch = useDispatch();
+
   const { colorMode, toggleColorMode } = useColorMode();
+  const storeLanguage = useSelector((store) => store.language.value);
+
+  const toggleLanguage = () => {
+    if (storeLanguage == "EN") {
+      dispatch(languageActions.changeLanguage("ES"));
+    } else {
+      dispatch(languageActions.changeLanguage("EN"));
+    }
+  };
 
   const secondaryColor = useColorModeValue(
     "custom.secondaryLight",
@@ -29,6 +42,9 @@ const NavBar = () => {
     >
       <ItalicText fontSize="30px">JG</ItalicText>
       <Spacer />
+      <Button onClick={toggleLanguage} mr={3}>
+        {storeLanguage === "EN" ? "EN" : "ES"}
+      </Button>
       <Button onClick={toggleColorMode}>
         {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
       </Button>

@@ -1,14 +1,22 @@
 import { Box, Flex, Heading, Text, useColorModeValue } from "@chakra-ui/react";
-import { about } from "data";
 import { SkillCard } from "./SkillCard";
 
-const Skills = () => {
-  const skillElementColor = useColorModeValue("#fff", "rgba(255, 255, 255, 0.06)");
+const Skills = ({ about }) => {
+  const skillElementColor = useColorModeValue(
+    "#fff",
+    "rgba(255, 255, 255, 0.06)"
+  );
 
   return (
-    <Box mx={5} maxWidth="550px">
+    <Box
+      mr={5}
+      my={[8, 8, 0, 0]}
+      pl={[5, 5, 2, 2]}
+      w={["94%", "97%", "50%", "50%"]}
+      maxW="550px"
+    >
       <Heading fontSize="22px" align="left" mb={3}>
-        Skills
+        {about.skillsSectionName}
       </Heading>
       <Box align="start" fontSize="16px">
         {about.skills.map((el) => (
