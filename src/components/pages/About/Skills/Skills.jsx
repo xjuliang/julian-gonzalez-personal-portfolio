@@ -24,9 +24,10 @@ const Skills = ({ about }) => {
             <Text>{el.name}</Text>
             <Flex
               bg={skillElementColor}
-              p={2}
+              p={3}
               borderRadius="8px"
               flexWrap="wrap"
+              border="1px solid grey"
             >
               {el.technologies.map((t) => (
                 <SkillCard key={t}>{t}</SkillCard>
