@@ -1,16 +1,17 @@
 import { Box, Flex, Spacer, useColorModeValue } from "@chakra-ui/react";
-import { projectsEN, projectsES } from "data";
+import { journeyEN, journeyES } from "data";
 import { useSelector } from "react-redux";
 import { Fade } from "react-reveal";
-import { ItalicText, ProjectsInfo } from "../..";
+import { ItalicText } from "../..";
+import { JourneyInfo } from "./JourneyInfo";
 
-const Projects = () => {
+const Journey = () => {
   const storeLanguage = useSelector((store) => store.language.value);
-  let projects = {};
+  let journey = {};
   if (storeLanguage == "EN") {
-    projects = projectsEN;
+    journey = journeyEN;
   } else {
-    projects = projectsES;
+    journey = journeyES;
   }
   const scrollIconColor = useColorModeValue("mousey-black", "mousey-white");
   const scrollerIconColor = useColorModeValue(
@@ -21,7 +22,6 @@ const Projects = () => {
     "custom.primaryLight",
     "custom.primaryDark"
   );
-
   return (
     <section>
       <Flex
@@ -34,8 +34,8 @@ const Projects = () => {
       >
         <Spacer />
         <Fade bottom>
-          <ItalicText pb={[5, 5, 10, 20]}>{projects.title}</ItalicText>
-          <ProjectsInfo projects={projects} />
+          <ItalicText pb={[5, 5, 10, 20]}>{journey.title}</ItalicText>
+          <JourneyInfo journey={journey} />
         </Fade>
         <Spacer />
         <Box>
@@ -52,4 +52,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Journey;

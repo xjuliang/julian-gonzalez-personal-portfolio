@@ -1,12 +1,12 @@
 import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Image,
-  Spacer,
-  Text,
-  useColorModeValue,
+	Box,
+	Button,
+	Flex,
+	Heading,
+	Image,
+	Spacer,
+	Text,
+	useColorModeValue
 } from "@chakra-ui/react";
 import { aboutEN, aboutES } from "data";
 import { useSelector } from "react-redux";
@@ -90,7 +90,11 @@ const About = () => {
                     ml={5}
                   ></Button>
                   <Button
-                    onClick={() => window.open("https://www.linkedin.com/in/juli%C3%A1n-marcos-gonz%C3%A1lez-354403201/")}
+                    onClick={() =>
+                      window.open(
+                        "https://www.linkedin.com/in/juli%C3%A1n-marcos-gonz%C3%A1lez-354403201/"
+                      )
+                    }
                     leftIcon={
                       <Image
                         src={`/icons/linkedin${iconsColor}.svg`}

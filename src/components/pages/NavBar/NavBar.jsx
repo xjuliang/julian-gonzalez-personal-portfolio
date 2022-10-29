@@ -43,7 +43,7 @@ const NavBar = () => {
       <ItalicText fontSize="30px">JG</ItalicText>
       <Spacer />
       <Button onClick={toggleLanguage} mr={3}>
-        {storeLanguage === "EN" ? "EN" : "ES"}
+        {storeLanguage === "EN" ? "ES" : "EN"}
       </Button>
       <Button onClick={toggleColorMode}>
         {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
