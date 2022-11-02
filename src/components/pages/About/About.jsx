@@ -63,7 +63,7 @@ const About = () => {
               <Heading fontSize="22px" mb={3}>
                 {about.descriptionSectionName}
               </Heading>
-              <Box fontSize="16px" color={fontColor}>
+              <Box fontSize="16px" fontWeight="bold" color={fontColor}>
                 {about.description.map((el) => (
                   <Text key={el}>{el}</Text>
                 ))}
