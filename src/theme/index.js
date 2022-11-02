@@ -4,7 +4,6 @@ import { Button } from "./components";
 
 export default extendTheme({
   initialColorMode: "dark",
-  useSystemColorMode: true,
   colors,
   fonts: {
     heading: `'Montserrat', sans-serif`,

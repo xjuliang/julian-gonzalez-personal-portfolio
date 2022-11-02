@@ -37,7 +37,7 @@ const Header = () => {
               direction="column"
               align={["center", "center", "center", "start"]}
             >
-              <ItalicText fontSize={["45px", "55px", "70px"]}>
+              <ItalicText fontSize={["40px", "55px", "70px"]}>
                 julian gonzalez
               </ItalicText>
               <Heading
