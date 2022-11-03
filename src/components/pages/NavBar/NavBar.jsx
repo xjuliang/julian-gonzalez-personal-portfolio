@@ -43,13 +43,13 @@ const NavBar = () => {
     >
       <ItalicText fontSize="30px">JG</ItalicText>
       <Spacer />
-      <Hide breakpoint="(max-width: 700px)">
+      <Show breakpoint="(min-width: 700px)">
         <NavBarContent
           nav={nav}
           toggleLanguage={toggleLanguage}
           storeLanguage={storeLanguage}
         />
-      </Hide>
+      </Show>
       <Show breakpoint="(max-width: 700px)">
         <NavBarDrawer
           nav={nav}

@@ -1,4 +1,6 @@
-import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
+import {
+  ChakraProvider, ColorModeScript
+} from "@chakra-ui/react";
 import "@fontsource/montserrat/300.css";
 import { Provider } from "react-redux";
 import { NavBar } from "src/components/pages/NavBar";
@@ -11,7 +13,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
       <Provider store={store}>
-        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+        <ColorModeScript />
         <NavBar />
         <Component {...pageProps} />
       </Provider>

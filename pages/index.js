@@ -1,17 +1,42 @@
-import { useColorModeValue } from "@chakra-ui/react";
+import {
+  CircularProgress,
+  Flex,
+  Spacer,
+  useColorModeValue
+} from "@chakra-ui/react";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 import {
   About,
   Contact,
   Footer,
   Header,
   Journey,
-  Projects,
+  Projects
 } from "src/components/index";
 
 export default function Home() {
   const container = useColorModeValue("container-white", "container-dark");
+  const loadingBg = useColorModeValue(
+    "custom.primaryLight",
+    "custom.primaryDark"
+  );
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
+  if (loading) {
+    return (
+      <Flex align="center" h="100vh" w="100vw" bg={loadingBg}>
+        <Spacer />
+        <CircularProgress isIndeterminate color="grey" thickness="12px" />
+        <Spacer />
+      </Flex>
+    );
+  }
   return (
     <div>
       <Head>
