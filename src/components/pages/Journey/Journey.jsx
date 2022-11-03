@@ -23,7 +23,7 @@ const Journey = () => {
     "custom.primaryDark"
   );
   return (
-    <section>
+    <section id="journey">
       <Flex
         align="center"
         justify="center"

@@ -37,7 +37,7 @@ const About = () => {
   const iconsColor = useColorModeValue("-dark", "-white");
 
   return (
-    <section>
+    <section id="about">
       <Flex
         align="center"
         justify="center"
