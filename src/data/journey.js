@@ -4,7 +4,7 @@ export const journeyEN = {
     title: "EXPERIENCE",
     data: [
       {
-        title: "Wenty (startup)",
+        title: "Wenty",
         date: "6/2022 - 9/2022",
         role: "Frontend Developer",
         description:
@@ -66,7 +66,7 @@ export const journeyES = {
     title: "EXPERIENCIA",
     data: [
       {
-        title: "Wenty (startup)",
+        title: "Wenty",
         date: "6/2022 - 9/2022",
         role: "Desarrollador Frontend",
         description:

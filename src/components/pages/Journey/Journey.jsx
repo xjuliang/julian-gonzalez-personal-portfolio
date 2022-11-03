@@ -1,4 +1,4 @@
-import { Flex, Spacer, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Spacer, useColorModeValue } from "@chakra-ui/react";
 import { journeyEN, journeyES } from "data";
 import { useSelector } from "react-redux";
 import { Fade } from "react-reveal";
@@ -38,7 +38,7 @@ const Journey = () => {
           <JourneyInfo journey={journey} />
         </Fade>
         <Spacer />
-        {/* <Box>
+        <Box>
           <Fade bottom>
             <div class="scroll-downs">
               <div class={scrollIconColor}>
@@ -46,7 +46,7 @@ const Journey = () => {
               </div>
             </div>
           </Fade>
-        </Box> */}
+        </Box>
       </Flex>
     </section>
   );
