@@ -1,6 +1,6 @@
 import { useColorModeValue } from "@chakra-ui/react";
 import Head from "next/head";
-import { About, Footer, Header, Journey, Projects } from "src/components/index";
+import { About, Contact, Footer, Header, Journey, Projects } from "src/components/index";
 
 export default function Home() {
   const container = useColorModeValue("container-white", "container-dark");
@@ -20,6 +20,7 @@ export default function Home() {
           <About />
           <Projects />
           <Journey />
+          <Contact/>
         <Footer />
         </div>
       </main>
