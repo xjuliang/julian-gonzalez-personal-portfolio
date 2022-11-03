@@ -8,7 +8,7 @@ const ItalicText = (props) => {
   );
   return (
     <Heading
-      fontFamily="Italic Bricks"
+      fontFamily="ItalicBricks"
       fontWeight="0"
       color={fontColor}
       {...props}

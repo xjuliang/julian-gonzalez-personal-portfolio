@@ -1,6 +1,7 @@
 @font-face {
-  font-family: "Italic Bricks";
-  src: url("//db.onlinewebfonts.com/t/ab16de1889ae2b44535f6bd55477bff4.eot");
+  font-family: "ItalicBricks";
+  src: url("../../public/fonts/Italic-Bricks.woff") format("woff");
+  /* src: url("//db.onlinewebfonts.com/t/ab16de1889ae2b44535f6bd55477bff4.eot");
   src: url("//db.onlinewebfonts.com/t/ab16de1889ae2b44535f6bd55477bff4.eot?#iefix")
       format("embedded-opentype"),
     url("//db.onlinewebfonts.com/t/ab16de1889ae2b44535f6bd55477bff4.woff2")
@@ -10,7 +11,7 @@
     url("//db.onlinewebfonts.com/t/ab16de1889ae2b44535f6bd55477bff4.ttf")
       format("truetype"),
     url("//db.onlinewebfonts.com/t/ab16de1889ae2b44535f6bd55477bff4.svg#Italic Bricks")
-      format("svg");
+      format("svg"); */
 }
 
 ::-moz-selection {
