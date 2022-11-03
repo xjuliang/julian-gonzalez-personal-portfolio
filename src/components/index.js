@@ -4,6 +4,7 @@ export * from './others';
 export * from './pages/About/Skills/SkillCard';
 export * from './pages/About/Skills';
 export * from './pages/About';
+export * from './pages/Contact';
 export * from './pages/Footer';
 export * from './pages/Header';
 export * from './pages/Journey/JourneyInfo/AccordionItemJourney';
