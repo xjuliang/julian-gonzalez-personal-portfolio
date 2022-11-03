@@ -1,5 +1,4 @@
-import { Box, useColorModeValue } from "@chakra-ui/react";
-import React, { Children } from "react";
+import { useColorModeValue } from "@chakra-ui/react";
 
 import { useCallback } from "react";
 import ParticlesComponent from "react-tsparticles";

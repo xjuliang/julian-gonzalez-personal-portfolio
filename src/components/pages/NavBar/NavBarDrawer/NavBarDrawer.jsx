@@ -1,18 +1,18 @@
 import { HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import {
-	Button,
-	Drawer,
-	DrawerBody,
-	DrawerCloseButton,
-	DrawerContent,
-	DrawerFooter,
-	DrawerHeader,
-	DrawerOverlay,
-	Flex,
-	Text,
-	useColorMode,
-	useColorModeValue,
-	useDisclosure
+  Button,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  Flex,
+  Text,
+  useColorMode,
+  useColorModeValue,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { Link } from "react-scroll";
 
@@ -23,7 +23,7 @@ const NavBarDrawer = ({ nav, toggleLanguage, storeLanguage }) => {
   return (
     <div>
       <Button onClick={onOpen}>
-        <HamburgerIcon  w={6} h={6}/>
+        <HamburgerIcon w={6} h={6} />
       </Button>
       <Drawer
         placement="right"
@@ -40,23 +40,25 @@ const NavBarDrawer = ({ nav, toggleLanguage, storeLanguage }) => {
           <DrawerBody>
             <Flex align="start" direction="column" mt={7}>
               {nav.sections.map((s) => (
-                <Text
+                <Link
+                  to={s.href}
+                  spy={true}
+                  smooth={true}
+                  offset={-30}
+                  duration={1000}
                   key={s.title}
-                  mb={7}
-                  cursor="pointer"
-                  fontSize="22px"
-                  onClick={onClose}
                 >
-                  <Link
-                    to={s.href}
-                    spy={true}
-                    smooth={true}
-                    offset={-30}
-                    duration={1200}
+                  <Text
+                    mb={7}
+                    cursor="pointer"
+                    fontSize="22px"
+                    onClick={() => {
+                      setTimeout(onClose, 0);
+                    }}
                   >
                     {s.title}
-                  </Link>
-                </Text>
+                  </Text>
+                </Link>
               ))}
             </Flex>
           </DrawerBody>

@@ -22,7 +22,7 @@ const AccordionItemJourney = ({ info }) => {
   };
 
   return (
-    <AccordionItem>
+    <AccordionItem >
       <AccordionButton _expanded={{ bg: "RGBA(0, 0, 0, 0.04)" }}>
         <Box
           flex="1"

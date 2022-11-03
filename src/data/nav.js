@@ -1,7 +1,7 @@
 export const navEN = {
   sections: [
     { title: "Home", href: "home" },
-    { title: "About", href: "about" },
+    { title: "About me", href: "about" },
     { title: "Projects", href: "projects" },
     { title: "Journey", href: "journey" },
     { title: "Contact", href: "contact" },
