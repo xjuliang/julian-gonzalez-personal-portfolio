@@ -3,7 +3,7 @@ import { colors } from "./colors";
 import { Button } from "./components";
 
 export default extendTheme({
-  initialColorMode: "dark",
+  // initialColorMode: "dark",
   colors,
   fonts: {
     heading: `'Montserrat', sans-serif`,

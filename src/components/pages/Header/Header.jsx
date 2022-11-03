@@ -4,7 +4,7 @@ import {
   Flex,
   Heading,
   Spacer,
-  useColorModeValue,
+  useColorModeValue
 } from "@chakra-ui/react";
 import { headerEN, headerES } from "data";
 import { useSelector } from "react-redux";
