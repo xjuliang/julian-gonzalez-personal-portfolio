@@ -1,17 +1,4 @@
-import {
-  Button,
-  Drawer,
-  DrawerBody,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
-  Flex,
-  Hide,
-  Show,
-  Spacer,
-  useColorModeValue,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Flex, Hide, Show, Spacer, useColorModeValue } from "@chakra-ui/react";
 import { navEN, navES } from "data";
 import { useDispatch, useSelector } from "react-redux";
 import { ItalicText } from "src/components/others";

@@ -60,7 +60,7 @@ const Footer = () => {
             ml={2}
           ></Button>
         </Box>
-        <Box>{storeLanguage == "EN" ? "Designed & Built by Julián González" : "Diseñado & Creado por Julián González"}</Box>
+        <Box mb={3}>{storeLanguage == "EN" ? "Designed & Built by Julián González" : "Diseñado & Creado por Julián González"}</Box>
       </Flex>
     </footer>
   );

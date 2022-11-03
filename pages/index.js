@@ -14,7 +14,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <div class={container}>
+        <div class={container} id="style-1">
           <div id="circle"></div>
           <Header />
           <About />

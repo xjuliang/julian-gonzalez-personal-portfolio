@@ -21,7 +21,7 @@ const Skills = ({ about }) => {
       <Box align="start" fontSize="16px">
         {about.skills.map((el) => (
           <Box key={el.name} mt={3}>
-            <Text>{el.name}</Text>
+            <Text mb={1}>{el.name}</Text>
             <Flex
               bg={skillElementColor}
               p={3}
