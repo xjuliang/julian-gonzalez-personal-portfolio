@@ -21,6 +21,7 @@
     "react-dom": "18.2.0",
     "react-redux": "^8.0.4",
     "react-reveal": "^1.2.2",
+    "react-scroll": "^1.8.8",
     "react-tsparticles": "^2.3.3",
     "tsparticles": "^2.3.4"
   },

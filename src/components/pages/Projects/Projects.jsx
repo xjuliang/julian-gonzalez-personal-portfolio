@@ -23,7 +23,7 @@ const Projects = () => {
   );
 
   return (
-    <section>
+    <section id="projects">
       <Flex
         align="center"
         justify="center"
@@ -34,7 +34,7 @@ const Projects = () => {
       >
         <Spacer />
         <Fade bottom>
-          <ItalicText pb={[5, 5, 10, 20]}>{projects.title}</ItalicText>
+          <ItalicText pb={[5, 5, 10, 10]}>{projects.title}</ItalicText>
           <ProjectsInfo projects={projects} />
         </Fade>
         <Spacer />

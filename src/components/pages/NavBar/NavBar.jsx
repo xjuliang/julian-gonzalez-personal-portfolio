@@ -1,20 +1,34 @@
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 import {
   Button,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
   Flex,
+  Hide,
+  Show,
   Spacer,
-  useColorMode,
   useColorModeValue,
+  useDisclosure,
 } from "@chakra-ui/react";
+import { navEN, navES } from "data";
 import { useDispatch, useSelector } from "react-redux";
 import { ItalicText } from "src/components/others";
 import { languageActions } from "src/redux/states/language";
+import { NavBarContent } from "./NavBarContent";
+import { NavBarDrawer } from "./NavBarDrawer";
 
 const NavBar = () => {
   const dispatch = useDispatch();
-
-  const { colorMode, toggleColorMode } = useColorMode();
   const storeLanguage = useSelector((store) => store.language.value);
+
+  let nav = {};
+  if (storeLanguage == "EN") {
+    nav = navEN;
+  } else {
+    nav = navES;
+  }
 
   const toggleLanguage = () => {
     if (storeLanguage == "EN") {
@@ -42,12 +56,20 @@ const NavBar = () => {
     >
       <ItalicText fontSize="30px">JG</ItalicText>
       <Spacer />
-      <Button onClick={toggleLanguage} mr={3}>
-        {storeLanguage === "EN" ? "ES" : "EN"}
-      </Button>
-      <Button onClick={toggleColorMode}>
-        {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-      </Button>
+      <Hide breakpoint="(max-width: 700px)">
+        <NavBarContent
+          nav={nav}
+          toggleLanguage={toggleLanguage}
+          storeLanguage={storeLanguage}
+        />
+      </Hide>
+      <Show breakpoint="(max-width: 700px)">
+        <NavBarDrawer
+          nav={nav}
+          toggleLanguage={toggleLanguage}
+          storeLanguage={storeLanguage}
+        />
+      </Show>
     </Flex>
   );
 };

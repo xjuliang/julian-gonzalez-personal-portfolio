@@ -27,7 +27,7 @@ const Header = () => {
   );
 
   return (
-    <section>
+    <section id="home">
       <Particles></Particles>
       <Fade bottom>
         <Center align="center" justify="center" h="100vh" py="50px">

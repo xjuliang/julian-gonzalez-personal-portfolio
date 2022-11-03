@@ -20,7 +20,7 @@ const Contact = () => {
   const resumeBtnColor = useColorModeValue("btn-white", "btn-dark");
 
   return (
-    <section>
+    <section id="contact">
       <Flex
         align="center"
         justify="center"
@@ -35,11 +35,10 @@ const Contact = () => {
           <Text w={["90vw", "90vw", "650px", "100vw"]} maxW="700px" mb={5}>
             {contact.description}
           </Text>
-          <button class={resumeBtnColor} onClick={() =>
-              window.open(
-                "mailto:julianmarcos505@gmail.com"
-              )
-            }>
+          <button
+            class={resumeBtnColor}
+            onClick={() => window.open("mailto:julianmarcos505@gmail.com")}
+          >
             <span>{contact.button}</span>
           </button>
         </Fade>

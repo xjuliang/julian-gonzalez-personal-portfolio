@@ -15,6 +15,8 @@ import Image from "next/image";
 
 const AccordionItemJourney = ({ info }) => {
   const iconsColor = useColorModeValue("-dark", "-white");
+  const btnBg = useColorModeValue("#fff", "#000");
+
   const linkHandler = (link) => {
     window.open(link);
   };
@@ -60,6 +62,7 @@ const AccordionItemJourney = ({ info }) => {
             }
             p={2}
             size="sm"
+            bg={btnBg}
           >
             Link
           </Button>
