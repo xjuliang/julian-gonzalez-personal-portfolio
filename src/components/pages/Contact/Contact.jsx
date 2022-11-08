@@ -4,6 +4,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Fade } from "react-reveal";
 import { ItalicText } from "../..";
+import { AnimatedBtn } from "../../others";
 
 const Contact = () => {
   const storeLanguage = useSelector((store) => store.language.value);
@@ -35,12 +36,11 @@ const Contact = () => {
           <Text w={["90vw", "90vw", "650px", "100vw"]} maxW="700px" mb={5}>
             {contact.description}
           </Text>
-          <button
-            class={resumeBtnColor}
+          <AnimatedBtn
             onClick={() => window.open("mailto:julianmarcos505@gmail.com")}
           >
-            <span>{contact.button}</span>
-          </button>
+            {contact.button}
+          </AnimatedBtn>
         </Fade>
         <Spacer />
       </Flex>
