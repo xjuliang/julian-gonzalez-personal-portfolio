@@ -10,6 +10,8 @@ export * from './pages/Header';
 export * from './pages/Journey/JourneyInfo/AccordionItemJourney';
 export * from './pages/Journey/JourneyInfo';
 export * from './pages/Journey';
+export * from './pages/NavBar/NavBarContent';
+export * from './pages/NavBar/NavBarDrawer';
 export * from './pages/NavBar';
 export * from './pages/Projects/ProjectsInfo/ProjectCard';
 export * from './pages/Projects/ProjectsInfo';
