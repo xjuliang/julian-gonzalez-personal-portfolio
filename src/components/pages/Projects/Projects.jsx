@@ -33,8 +33,10 @@ const Projects = () => {
         bg={bgColor}
       >
         <Spacer />
-        <Fade bottom>
+        <Fade left>
           <ItalicText pb={[5, 5, 10, 10]}>{projects.title}</ItalicText>
+        </Fade>
+        <Fade bottom>
           <ProjectsInfo projects={projects} />
         </Fade>
         <Spacer />

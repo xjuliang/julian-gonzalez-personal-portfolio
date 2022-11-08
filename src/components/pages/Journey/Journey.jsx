@@ -33,8 +33,10 @@ const Journey = () => {
         bg={bgColor}
       >
         <Spacer />
-        <Fade bottom>
+        <Fade left>
           <ItalicText pb={[5, 10]}>{journey.title}</ItalicText>
+        </Fade>
+        <Fade bottom>
           <JourneyInfo journey={journey} />
         </Fade>
         <Spacer />
