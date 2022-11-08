@@ -4,20 +4,20 @@ export const journeyEN = {
     title: "EXPERIENCE",
     data: [
       {
-        title: "Wenty",
-        date: "6/2022 - 9/2022",
-        role: "Frontend Developer",
-        description:
-          "I worked with the role of a Frontend developer, attending daily meetings and fulfilling full work days. My responsibility was to develop new features and improve the existing ones. Thanks to this job, I knew that I have the ability and the desire to dedicate myself to this. The technologies that I used the most were React, NextJS, Redux, CSS, Git and Figma",
-        link: "https://wenty.co/",
-      },
-      {
         title: "Freelance Development",
         date: "10/2022 - Present",
         role: "Full Stack Development",
         description:
           "I developed personalized projects for some gastronomic businesses. These were pages with a product catalog, cart, the possibility of order products, information and data management. Thanks to this they were able to automate processes and generate more income.",
         link: "https://julian-gonzalez-portfolio.vercel.app/",
+      },
+      {
+        title: "Wenty",
+        date: "6/2022 - 9/2022",
+        role: "Frontend Developer",
+        description:
+          "I worked with the role of a Frontend developer, attending daily meetings and fulfilling full work days. My responsibility was to develop new features and improve the existing ones. Thanks to this job, I knew that I have the ability and the desire to dedicate myself to this. The technologies that I used the most were React, NextJS, Redux, CSS, Git and Figma",
+        link: "https://wenty.co/",
       },
     ],
   },
@@ -66,20 +66,20 @@ export const journeyES = {
     title: "EXPERIENCIA",
     data: [
       {
+        title: "Desarrollo Freelance",
+        date: "10/2022 - Presente",
+        role: "Desarrollador Full Stack",
+        description:
+        "Realicé proyectos personalizados para algunos comercios gastronómicos. Estos eran páginas con catálogo de productos, carrito, la posibilidad de realizar pedidos, información y administración de datos. Gracias a esto pudieron automatizar procesos y generar más ingresos.",
+        link: "https://julian-gonzalez-portfolio.vercel.app/",
+      },
+      {
         title: "Wenty",
         date: "6/2022 - 9/2022",
         role: "Desarrollador Frontend",
         description:
           "Asistí a reuniones diarias y realicé jornadas completas de trabajo. Mi responsabilidad era programar nuevas funcionalidades y mejorar las ya existentes. Gracias a este trabajo, supe que tengo la capacidad y las ganas de dedicarme a esto. Las tecnologias que más usé fueron React, NextJS, Redux, CSS, Git y Figma",
         link: "https://wenty.co/",
-      },
-      {
-        title: "Desarrollo Freelance",
-        date: "10/2022 - Presente",
-        role: "Desarrollador Full Stack",
-        description:
-          "Realicé proyectos personalizados para algunos comercios gastronómicos. Estos eran páginas con catálogo de productos, carrito, la posibilidad de realizar pedidos, información y administración de datos. Gracias a esto pudieron automatizar procesos y generar más ingresos.",
-        link: "https://julian-gonzalez-portfolio.vercel.app/",
       },
     ],
   },
