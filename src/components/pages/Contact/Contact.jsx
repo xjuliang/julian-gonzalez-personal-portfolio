@@ -18,7 +18,6 @@ const Contact = () => {
     "custom.primaryLight",
     "custom.primaryDark"
   );
-  const resumeBtnColor = useColorModeValue("btn-white", "btn-dark");
 
   return (
     <section id="contact">
@@ -31,8 +30,10 @@ const Contact = () => {
         bg={bgColor}
       >
         <Spacer />
-        <Fade bottom>
+        <Fade left>
           <ItalicText pb={[5, 10]}>{contact.title}</ItalicText>
+        </Fade>
+        <Fade bottom>
           <Text w={["90vw", "90vw", "650px", "100vw"]} maxW="700px" mb={5}>
             {contact.description}
           </Text>

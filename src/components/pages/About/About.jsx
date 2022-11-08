@@ -1,12 +1,12 @@
 import {
-	Box,
-	Button,
-	Flex,
-	Heading,
-	Image,
-	Spacer,
-	Text,
-	useColorModeValue
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Spacer,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { aboutEN, aboutES } from "data";
 import { useSelector } from "react-redux";
@@ -47,8 +47,10 @@ const About = () => {
         bg={bgColor}
       >
         <Spacer />
-        <Fade bottom>
+        <Fade left>
           <ItalicText pb={[5, 5, 10, 20]}>{about.title}</ItalicText>
+        </Fade>
+        <Fade bottom>
           <Flex
             align="start"
             justify="center"
