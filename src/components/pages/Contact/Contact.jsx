@@ -37,11 +37,9 @@ const Contact = () => {
           <Text w={["90vw", "90vw", "650px", "100vw"]} maxW="700px" mb={5}>
             {contact.description}
           </Text>
-          <AnimatedBtn
-            onClick={() => window.open("mailto:julianmarcos505@gmail.com")}
-          >
-            {contact.button}
-          </AnimatedBtn>
+          <a href="mailto:julianmarcos505@gmail.com">
+            <AnimatedBtn>{contact.button}</AnimatedBtn>
+          </a>
         </Fade>
         <Spacer />
       </Flex>

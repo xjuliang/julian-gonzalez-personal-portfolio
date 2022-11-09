@@ -1,9 +1,10 @@
 import {
-	Box,
-	Button, Grid,
-	Spacer,
-	Text,
-	useColorModeValue
+  Box,
+  Button,
+  Grid,
+  Spacer,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import Image from "next/image";
 
@@ -49,32 +50,35 @@ const ProjectCard = ({ project }) => {
       </Grid>
       <Spacer />
       <Box pb={3} align="center">
-        <Button
-          onClick={() => linkHandler(project.links.code)}
-          leftIcon={
-            <Image
-              src={`/icons/github${iconsColor}.svg`}
-              layout="fill"
-              alt="github"
-            />
-          }
-          variant="unstyled"
-          size="sm"
-          mr={4}
-        ></Button>
-        <Button
-          onClick={() => linkHandler(project.links.page)}
-          leftIcon={
-            <Image
-              src={`/icons/link${iconsColor}.svg`}
-              layout="fill"
-              alt="page"
-            />
-          }
-          variant="unstyled"
-          size="sm"
-          ml={4}
-        ></Button>
+        <a href={project.links.code} target="_blank" rel="noreferrer">
+          <Button
+            leftIcon={
+              <Image
+                src={`/icons/github${iconsColor}.svg`}
+                layout="fill"
+                alt="github"
+              />
+            }
+            variant="unstyled"
+            size="sm"
+            mr={4}
+          ></Button>
+        </a>
+        <a href={project.links.page} target="_blank" rel="noreferrer">
+          <Button
+            onClick={() => linkHandler(project.links.page)}
+            leftIcon={
+              <Image
+                src={`/icons/link${iconsColor}.svg`}
+                layout="fill"
+                alt="page"
+              />
+            }
+            variant="unstyled"
+            size="sm"
+            ml={4}
+          ></Button>
+        </a>
       </Box>
     </div>
   );
