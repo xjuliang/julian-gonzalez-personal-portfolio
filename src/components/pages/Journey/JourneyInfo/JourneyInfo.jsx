@@ -1,17 +1,16 @@
 import { Accordion, Box, Center, useColorModeValue } from "@chakra-ui/react";
 import { useState } from "react";
+import { AnimatedBtn } from "src/components/others";
 import { AccordionItemJourney } from "./AccordionItemJourney";
 
 const JourneyInfo = ({ journey }) => {
   const [category, setCategory] = useState("education");
-  const resumeBtnColor = useColorModeValue("btn-white", "btn-dark");
   const btnBgColor = useColorModeValue("#000", "#fff");
 
   return (
     <Box>
       <Center mb={[5, 10]}>
-        <button
-          class={resumeBtnColor}
+        <AnimatedBtn
           style={{
             background: category == "education" && btnBgColor,
             padding: "12px",
@@ -21,11 +20,10 @@ const JourneyInfo = ({ journey }) => {
             setCategory("education");
           }}
         >
-          <span>{journey.education.title}</span>
-        </button>
+          {journey.education.title}
+        </AnimatedBtn>
         <Box w={[5, 5, 10, 10]}></Box>
-        <button
-          class={resumeBtnColor}
+        <AnimatedBtn
           style={{
             background: category == "experience" && btnBgColor,
             padding: "12px",
@@ -35,8 +33,8 @@ const JourneyInfo = ({ journey }) => {
             setCategory("experience");
           }}
         >
-          <span>{journey.experience.title}</span>
-        </button>
+          {journey.experience.title}
+        </AnimatedBtn>
       </Center>
       <Accordion
         allowToggle

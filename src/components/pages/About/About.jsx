@@ -6,7 +6,7 @@ import {
   Image,
   Spacer,
   Text,
-  useColorModeValue,
+  useColorModeValue
 } from "@chakra-ui/react";
 import { aboutEN, aboutES } from "data";
 import { useSelector } from "react-redux";
@@ -70,44 +70,51 @@ const About = () => {
                   <Text key={el}>{el}</Text>
                 ))}
                 <Flex mt={5} align="center">
-                  <form
-                    action="https://drive.google.com/file/d/1bPJ3QuMrrwZPLnhvGOJ_5o9gOibaGOdk/view?usp=sharing"
+                  <a
+                    href="https://drive.google.com/file/d/1bPJ3QuMrrwZPLnhvGOJ_5o9gOibaGOdk/view?usp=sharing"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <button class={resumeBtnColor} type="submit">
                       <span>{about.resumeText}</span>
                     </button>
-                  </form>
-                  <Button
-                    onClick={() => window.open("https://github.com/xjuliang")}
-                    leftIcon={
-                      <Image
-                        src={`/icons/github${iconsColor}.svg`}
-                        layout="fill"
-                        alt="github"
-                        h="40px"
-                      />
-                    }
-                    variant="unstyled"
-                    ml={5}
-                  ></Button>
-                  <Button
-                    onClick={() =>
-                      window.open(
-                        "https://www.linkedin.com/in/juli%C3%A1n-marcos-gonz%C3%A1lez-354403201/"
-                      )
-                    }
-                    leftIcon={
-                      <Image
-                        src={`/icons/linkedin${iconsColor}.svg`}
-                        layout="fill"
-                        alt="linkedin"
-                        h="40px"
-                      />
-                    }
-                    variant="unstyled"
-                    ml={5}
-                  ></Button>
+                  </a>
+                  <a
+                    href="https://github.com/xjuliang"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Button
+                      leftIcon={
+                        <Image
+                          src={`/icons/github${iconsColor}.svg`}
+                          layout="fill"
+                          alt="github"
+                          h="40px"
+                        />
+                      }
+                      variant="unstyled"
+                      ml={5}
+                    ></Button>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/juli%C3%A1n-marcos-gonz%C3%A1lez-354403201/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Button
+                      leftIcon={
+                        <Image
+                          src={`/icons/linkedin${iconsColor}.svg`}
+                          layout="fill"
+                          alt="linkedin"
+                          h="40px"
+                        />
+                      }
+                      variant="unstyled"
+                      ml={5}
+                    ></Button>
+                  </a>
                 </Flex>
               </Box>
             </Box>
