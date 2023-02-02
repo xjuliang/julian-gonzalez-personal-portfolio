@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Flex,
   Grid,
   Spacer,
   Text,
@@ -15,10 +16,6 @@ const ProjectCard = ({ project }) => {
   );
   const iconsColor = useColorModeValue("-dark", "-white");
   const bgColor = useColorModeValue("#fff", "#000");
-
-  const linkHandler = (link) => {
-    window.open(link);
-  };
 
   return (
     <div class={cardClass}>
@@ -43,42 +40,52 @@ const ProjectCard = ({ project }) => {
         gridTemplateColumns="repeat(auto-fill, minmax(min(90%,4.5rem),1fr))"
       >
         {project.tags.map((t) => (
-          <Box key={t} fontSize="12px" bg={bgColor} p={1} borderRadius="8px">
+          <Flex
+            key={t}
+            fontSize="12px"
+            bg={bgColor}
+            p={1}
+            borderRadius="8px"
+            align="center"
+            justify="center"
+          >
             {t}
-          </Box>
+          </Flex>
         ))}
       </Grid>
       <Spacer />
       <Box pb={3} align="center">
-        <a href={project.links.code} target="_blank" rel="noreferrer">
-          <Button
-            leftIcon={
-              <Image
-                src={`/icons/github${iconsColor}.svg`}
-                layout="fill"
-                alt="github"
-              />
-            }
-            variant="unstyled"
-            size="sm"
-            mr={4}
-          ></Button>
-        </a>
-        <a href={project.links.page} target="_blank" rel="noreferrer">
-          <Button
-            onClick={() => linkHandler(project.links.page)}
-            leftIcon={
-              <Image
-                src={`/icons/link${iconsColor}.svg`}
-                layout="fill"
-                alt="page"
-              />
-            }
-            variant="unstyled"
-            size="sm"
-            ml={4}
-          ></Button>
-        </a>
+        {project.links.code && (
+          <a href={project.links.code} target="_blank" rel="noreferrer">
+            <Button
+              leftIcon={
+                <Image
+                  src={`/icons/github${iconsColor}.svg`}
+                  layout="fill"
+                  alt="github"
+                />
+              }
+              variant="unstyled"
+              size="sm"
+              mr={4}
+            ></Button>
+          </a>
+        )}
+        {project.links.page && (
+          <a href={project.links.page} target="_blank" rel="noreferrer">
+            <Button
+              leftIcon={
+                <Image
+                  src={`/icons/link${iconsColor}.svg`}
+                  layout="fill"
+                  alt="page"
+                />
+              }
+              variant="unstyled"
+              size="sm"
+            ></Button>
+          </a>
+        )}
       </Box>
     </div>
   );

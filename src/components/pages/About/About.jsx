@@ -69,14 +69,23 @@ const About = () => {
                 {about.description.map((el) => (
                   <Text key={el}>{el}</Text>
                 ))}
-                <Flex mt={5} align="center">
+                <Flex mt={5} align="center" justify={["center","normal"]} flexWrap="wrap" gap={3}>
                   <a
-                    href="https://drive.google.com/file/d/1bPJ3QuMrrwZPLnhvGOJ_5o9gOibaGOdk/view?usp=sharing"
+                    href={about.resumeLink}
                     target="_blank"
                     rel="noreferrer"
                   >
                     <button class={resumeBtnColor} type="submit">
                       <span>{about.resumeText}</span>
+                    </button>
+                  </a>
+                  <a
+                    href="https://drive.google.com/drive/folders/1Ty-Cta7m-x0Qi-fF1276YKRGb2I3xFzP?usp=share_link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button class={resumeBtnColor} type="submit">
+                      <span>{about.certificatesText}</span>
                     </button>
                   </a>
                   <a
@@ -94,7 +103,6 @@ const About = () => {
                         />
                       }
                       variant="unstyled"
-                      ml={5}
                     ></Button>
                   </a>
                   <a
@@ -112,7 +120,6 @@ const About = () => {
                         />
                       }
                       variant="unstyled"
-                      ml={5}
                     ></Button>
                   </a>
                 </Flex>

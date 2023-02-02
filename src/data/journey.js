@@ -8,8 +8,8 @@ export const journeyEN = {
         date: "10/2022 - Present",
         role: "Full Stack Development",
         description:
-          "I developed personalized projects for some gastronomic businesses. These were pages with a product catalog, cart, the possibility of order products, information and data management. Thanks to this they were able to automate processes and generate more income.",
-        link: "https://julian-gonzalez-portfolio.vercel.app/",
+          "I develop personalized projects for some gastronomic businesses. These were pages with a product catalog, cart, the possibility of order products, information and data management. Thanks to this they were able to automate processes and generate more income.",
+        link: "",
       },
       {
         title: "Wenty",
@@ -70,8 +70,8 @@ export const journeyES = {
         date: "10/2022 - Presente",
         role: "Desarrollador Full Stack",
         description:
-        "Realicé proyectos personalizados para algunos comercios gastronómicos. Estos eran páginas con catálogo de productos, carrito, la posibilidad de realizar pedidos, información y administración de datos. Gracias a esto pudieron automatizar procesos y generar más ingresos.",
-        link: "https://julian-gonzalez-portfolio.vercel.app/",
+        "Realizo proyectos personalizados para algunos comercios gastronómicos. Estos eran páginas con catálogo de productos, carrito, la posibilidad de realizar pedidos, información y administración de datos. Gracias a esto pudieron automatizar procesos y generar más ingresos.",
+        link: "",
       },
       {
         title: "Wenty",

@@ -22,7 +22,7 @@ const AccordionItemJourney = ({ info }) => {
   };
 
   return (
-    <AccordionItem >
+    <AccordionItem>
       <AccordionButton _expanded={{ bg: "RGBA(0, 0, 0, 0.04)" }}>
         <Box
           flex="1"
@@ -50,22 +50,25 @@ const AccordionItemJourney = ({ info }) => {
               {info.date}
             </Text>
           </Show>
-          <Button
-            onClick={() => linkHandler(info.link)}
-            rightIcon={
-              <Image
-                src={`/icons/link${iconsColor}.svg`}
-                alt="link"
-                width="18px"
-                height="18px"
-              />
-            }
-            p={2}
-            size="sm"
-            bg={btnBg}
-          >
-            Link
-          </Button>
+          {info.link && (
+            <a href={info.link} target="_blank" rel="noreferrer">
+            <Button
+              rightIcon={
+                <Image
+                  src={`/icons/link${iconsColor}.svg`}
+                  alt="link"
+                  width="18px"
+                  height="18px"
+                />
+              }
+              p={2}
+              size="sm"
+              bg={btnBg}
+            >
+              Link
+            </Button>
+            </a>
+          )}
         </Flex>
       </AccordionPanel>
     </AccordionItem>

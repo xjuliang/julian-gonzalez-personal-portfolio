@@ -1,7 +1,7 @@
 export const headerEN = {
-    subtitle:"Frontend Developer & Computer Technician"
+    subtitle:"Developer & Computer Technician"
 }
 
 export const headerES = {
-    subtitle:"Desarrollador Frontend & Técnico en Computación"
+    subtitle:"Desarrollador & Técnico en Computación"
 }
