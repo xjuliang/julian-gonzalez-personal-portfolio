@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "ItalicBricks";
+  src: url("../../public/fonts/Italic-Bricks.woff") format("woff");
+}
+
+::-moz-selection {
+  color: white;
+  background: black;
+}
+
+::selection {
+  color: white;
+  background: black;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+.scroll-downs {
+  width: 34px;
+  height: 55px;
+}
+.mousey-white {
+  width: 3px;
+  padding: 10px 15px;
+  height: 32px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller-white {
+  width: 3px;
+  height: 13px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+.mousey-black {
+  width: 3px;
+  padding: 10px 15px;
+  height: 32px;
+  border: 2px solid #000;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller-black {
+  width: 3px;
+  height: 13px;
+  border-radius: 25%;
+  background-color: #000;
+  animation-name: scroll;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}
+
+.container-dark {
+  /* scroll-snap-type: y mandatory; */
+  /* overflow-y: scroll; */
+  height: 100vh;
+  background: #111111;
+  cursor: url(/white-circle.svg), auto;
+}
+
+.container-white {
+  /* scroll-snap-type: y mandatory; */
+  /* overflow-y: scroll; */
+  height: 100vh;
+  background: #edf2f7;
+  cursor: url(/black-circle.svg), auto;
+}
+
+section {
+  background-size: cover;
+  /* height: 100%; */
+  scroll-snap-align: start;
+  opacity: 0.85;
+}
+
+#tsparticles {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
