@@ -8,7 +8,7 @@ export const aboutEN = {
   ],
   resumeText: "Resume",
   resumeLink:
-    "https://drive.google.com/file/d/1AQqitpJ1SemlL03npwozHWNUVUoF7pX3/view",
+    "https://drive.google.com/file/d/1EKJT4FECwbXj7zBAnRT7hvWvnk-DVOSm/view",
   certificatesText: "Certificates",
   skillsSectionName: "Skills",
   skills: [
@@ -54,7 +54,7 @@ export const aboutES = {
   ],
   resumeText: "Curriculum",
   resumeLink:
-    "https://drive.google.com/file/d/12ibUBDsTd5k-a6erIEp3ipbh2vdZiAGQ/view",
+    "https://drive.google.com/file/d/1tVlmEtBKGfzEcVCdRXPE8MMQbPfJH1Rw/view",
   certificatesText: "Certificados",
   skillsSectionName: "Mis tecnologías",
   skills: [
